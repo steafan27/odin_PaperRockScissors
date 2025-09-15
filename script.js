@@ -6,11 +6,13 @@ let userPoints = 0;
 let cpuPoints = 0;
 
 function userScore(){
-    return ++userPoints;
+    userPoints = userPoints + 1
+    return;
 }
 
 function cpuScore(){
-    return ++cpuPoints;
+    cpuPoints = cpuPoints + 1
+    return;
 }
 
 function brokenGame(){
@@ -91,9 +93,11 @@ function playGame(){
 }
 
 function computeScore(){
-    if(userScore == cpuScore){
+    console.log(userPoints)
+    console.log(cpuPoints)
+    if(userPoints == cpuPoints){
         console.log("TIE");
-    }else if (userScore > cpuScore){
+    }else if (userPoints > cpuPoints){
         console.log("USER WINS");
     }else{
         console.log("CPU WINS");
